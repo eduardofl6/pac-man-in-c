@@ -10,8 +10,8 @@
 #define W 64
 /*
 last edition note:
-- Ghots doesn't disappear from spawn	(solved, they were spawing +1 in y scale, not in setted position)
-- Ghots passing trough wall if they spawned next to it (solved, same case as ^)
+- Ghots don't disappear from spawn (solved, they were spawing +1 in y scale, not in setted position)
+- Ghots passing through the wall if they spawned next to it (solved, same case as ^)
 - Prev receiving not allowed values (If they pass through each other they delete a point)
 - If the ghost is setted to spawn in 30,(around 20 or 22+) they doesn't move)
 */
@@ -239,7 +239,7 @@ void g_move(void)
 	
 }
 
-//Move the cursors to 0,0 position, then writting the next frame without deleting the previous one (prevent blink)
+//Move the cursor to 0,0 position, then write the next frame without deleting the previous one (prevent the event "blink")
 void cposition(int x, int y)
 {
    COORD coord = { x, y };
